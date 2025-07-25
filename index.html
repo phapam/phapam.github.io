@@ -11,34 +11,47 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
+      background: #fff8dc; /* vàng nhạt */
+      color: #000; /* màu chữ đen */
     }
+
+    /* Phần banner */
+    .banner img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
     header {
-      background-color: #0059b3;
-      padding: 15px 30px;
-      color: white;
-      font-size: 24px;
+      background-color: #ffd700; /* vàng tươi */
+      padding: 20px 30px;
+      color: #000;
+      font-size: 28px;
       font-weight: bold;
       text-align: center;
     }
+
     nav {
-      background: #004080;
+      background: #f2c94c; /* vàng nhẹ */
       padding: 15px;
       display: flex;
       justify-content: center;
       gap: 20px;
     }
+
     nav a {
-      color: white;
+      color: #000; /* chữ đen */
       text-decoration: none;
       font-weight: 600;
       padding: 6px 12px;
       border-radius: 4px;
       transition: background-color 0.3s ease;
     }
+
     nav a:hover, nav a.active {
-      background-color: #00264d;
+      background-color: #ffe082;
     }
 
     main {
@@ -49,35 +62,43 @@
       border-radius: 8px;
       box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
     }
+
     h1 {
-      color: #0059b3;
+      color: #b58900; /* nâu vàng */
       margin-bottom: 20px;
     }
+
     ul.post-list {
       list-style: none;
       padding-left: 0;
     }
+
     ul.post-list li {
       padding: 15px 0;
       border-bottom: 1px solid #eee;
     }
+
     ul.post-list li:last-child {
       border-bottom: none;
     }
+
     ul.post-list li a {
       font-weight: bold;
       font-size: 18px;
-      color: #0073e6;
+      color: #d35400;
       text-decoration: none;
     }
+
     ul.post-list li a:hover {
       text-decoration: underline;
     }
+
     .post-date {
       font-size: 14px;
-      color: #999;
+      color: #666;
       margin-top: 5px;
     }
+
     footer {
       margin-top: 40px;
       text-align: center;
@@ -101,10 +122,18 @@
 </head>
 <body>
 
+<!-- ✅ Banner ảnh --> 
+<div class="banner">
+  <img src="banner.jpg" alt="Mahayana Banner">
+</div>
+
 <header>Mahayana Universal Light</header>
 
 <nav>
-  <a href="index.html" class="active">Trang chủ</a> <a href="phap-am.html">Pháp âm</a> <a href="van-dap.html">Vấn đáp</a> <a href="do-dang.html">Đồ đằng</a>
+  <a href="index.html" class="active">Trang chủ</a>
+  <a href="phap-am.html">Pháp âm</a>
+  <a href="van-dap.html">Vấn đáp</a>
+  <a href="do-dang.html">Đồ đằng</a>
 </nav>
 
 <main>
