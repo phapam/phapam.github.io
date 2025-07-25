@@ -5,38 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Đồ đằng - Mahayana Universal Light</title>
   <style>
-    /* CSS tương tự các trang khác */
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
+      background: #fff8dc;
+      color: #000;
+    }
+    .banner {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px 8px 0 0;
+    }
+    .banner img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px 8px 0 0;
+    }
+    .clouds {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: url('clouds.png') repeat-x;
+      background-size: contain;
+      animation: moveClouds 60s linear infinite;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    @keyframes moveClouds {
+      from { transform: translateX(0); }
+      to { transform: translateX(50%); }
     }
     header {
-      background-color: #0059b3;
-      padding: 15px 30px;
-      color: white;
-      font-size: 24px;
+      background-color: #ffd700;
+      padding: 20px 30px;
+      color: #000;
+      font-size: 28px;
       font-weight: bold;
       text-align: center;
     }
+    .nav-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      max-width: 900px;
+      margin: 0 auto;
+      background: #f2c94c;
+      border-radius: 0 0 8px 8px;
+    }
     nav {
-      background: #004080;
-      padding: 15px;
       display: flex;
-      justify-content: center;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
       gap: 20px;
+      padding: 15px;
+      min-width: max-content;
     }
     nav a {
-      color: white;
+      white-space: nowrap;
+      color: #000;
       text-decoration: none;
       font-weight: 600;
       padding: 6px 12px;
       border-radius: 4px;
       transition: background-color 0.3s ease;
     }
-    nav a:hover, nav a.active {
-      background-color: #00264d;
+    nav a:hover,
+    nav a.active {
+      background-color: #ffe082;
     }
     main {
       max-width: 900px;
@@ -47,18 +91,33 @@
       box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
     }
     h1 {
-      color: #0059b3;
+      color: #b58900;
       margin-bottom: 20px;
     }
-    section.article-item {
-      margin-bottom: 30px;
+    ul.post-list {
+      list-style: none;
+      padding-left: 0;
     }
-    section.article-item h2 {
-      margin-bottom: 10px;
-      color: #0073e6;
+    ul.post-list li {
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
     }
-    section.article-item p {
-      line-height: 1.6;
+    ul.post-list li:last-child {
+      border-bottom: none;
+    }
+    ul.post-list li a {
+      font-weight: bold;
+      font-size: 18px;
+      color: #d35400;
+      text-decoration: none;
+    }
+    ul.post-list li a:hover {
+      text-decoration: underline;
+    }
+    .post-date {
+      font-size: 14px;
+      color: #666;
+      margin-top: 5px;
     }
     footer {
       margin-top: 40px;
@@ -67,12 +126,7 @@
       color: #666;
       font-size: 14px;
     }
-    /* Responsive */
     @media(max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
       main {
         margin: 15px;
         padding: 15px;
@@ -82,37 +136,34 @@
 </head>
 <body>
 
-<header>Mahayana Universal Light</header>
+<div class="banner">
+  <img src="banner.jpg" alt="Mahayana Banner" />
+  <div class="clouds"></div>
+</div>
 
-<nav>
-  <a href="index.html">Trang chủ</a>
-  <a href="phap-am.html">Pháp âm</a>
-  <a href="van-dap.html">Vấn đáp</a>
-  <a href="do-dang.html" class="active">Đồ đằng</a>
-</nav>
+<div class="nav-wrapper">
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="phap-am.html">Pháp âm</a>
+    <a href="van-dap.html">Vấn đáp</a>
+    <a href="do-dang.html" class="active">Đồ đằng</a>
+  </nav>
+</div>
 
 <main>
   <h1>Đồ đằng</h1>
-
-  <section class="article-item" id="dd1">
-    <h2>Bài viết 1: Bài học về tâm linh</h2>
-    <p>Đồ đằng là những bài học, suy ngẫm về con đường tu tập và đời sống tâm linh...</p>
-  </section>
-
-  <section class="article-item" id="dd2">
-    <h2>Bài viết 2: Ý nghĩa của lòng từ bi</h2>
-    <p>Trong Phật giáo, lòng từ bi là nền tảng của sự giác ngộ và hòa hợp với tất cả chúng sinh...</p>
-  </section>
-
-  <section class="article-item" id="dd3">
-    <h2>Bài viết 3: Thực hành chánh niệm trong đời sống</h2>
-    <p>Chánh niệm giúp ta sống tỉnh thức và hiểu rõ bản thân cũng như thế giới xung quanh...</p>
-  </section>
-
+  <ul class="post-list">
+    <li id="dd1">
+      <a href="#">Đồ đằng 1: Ý nghĩa Phật pháp</a>
+      <div class="post-date">Ngày đăng: 23/07/2025</div>
+      <p>Mô tả nội dung đồ đằng 1...</p>
+    </li>
+    <!-- Thêm bài mới tại đây -->
+  </ul>
 </main>
 
 <footer>
-  &copy; 2025 Mahayana Universal Light
+  &copy; 2025 Đại Thừa Phổ Quang
 </footer>
 
 </body>
