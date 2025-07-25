@@ -1,177 +1,125 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>学佛修行要明心 2025年07月23日</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mẫu Mahayana Light</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background-color: #eaeaea;
-      font-family: 'Arial', sans-serif;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; color: #333; }
 
-    .container {
-      width: 100%;
-      box-sizing: border-box;
-      border: 3px solid #aaa;
-      padding: 20px 16px;
-      background-color: #fff;
-      min-height: 100vh;
+    /* Thanh điều hướng */
+    nav {
+      position: fixed; top: 0; width: 100%;
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1000;
     }
-
-    .title {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .title ruby {
-      font-size: 32px;
-    }
-
-    .title rt {
-      font-size: 16px;
-      color: #666;
-    }
-
-    .subtitle {
-      text-align: center;
-      font-size: 26px;
+    nav ul { list-style: none; display: flex; justify-content: center; padding: 15px; }
+    nav li { margin: 0 15px; }
+    nav a {
+      text-decoration: none;
+      color: #0073e6;
       font-weight: bold;
-      margin-bottom: 30px;
-      color: #000;
     }
 
-    .audio-section {
+    /* Banner đầu trang */
+    .banner {
+      margin-top: 60px;
+      background: url('banner.jpg') center/cover no-repeat;
+      height: 60vh;
       display: flex;
-      justify-content: center;
       align-items: center;
-      margin-bottom: 30px;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    .banner h1 {
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     }
 
-    audio {
-      width: 100%;
-      max-width: 500px;
+    /* Nội dung chính */
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section:nth-child(even) { background: #f9f9f9; }
+    .section h2 { margin-bottom: 20px; color: #0073e6; }
+    .section p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #0073e6;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
     }
 
-    .sentence {
-      margin-bottom: 40px;
-      font-size: 22px;
-      line-height: 1.8;
-      color: #222;
-      text-align: justify;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #333;
+      color: white;
     }
 
+    /* Responsive */
     @media (max-width: 768px) {
-      .container {
-        padding: 16px 10px;
-        border-width: 2px;
-      }
-
-      .title ruby {
-        font-size: 26px;
-      }
-
-      .title rt {
-        font-size: 14px;
-      }
-
-      .subtitle {
-        font-size: 22px;
-      }
-
-      .sentence {
-        font-size: 20px;
-      }
-
-      audio {
-        max-width: 100%;
-      }
+      .banner h1 { font-size: 2rem; }
+      nav ul { flex-wrap: wrap; }
+      nav li { margin: 10px; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="title">
-      <ruby>学<rt>Xué</rt></ruby>
-      <ruby>佛<rt>Fó</rt></ruby>
-      <ruby>修<rt>xiū</rt></ruby>
-      <ruby>行<rt>xíng</rt></ruby>
-      <ruby>要<rt>yào</rt></ruby>
-      <ruby>明<rt>míng</rt></ruby>
-      <ruby>心<rt>xīn</rt></ruby>
-      　
-      <ruby>2025<rt>èr líng èr wǔ</rt></ruby>
-      <ruby>年<rt>nián</rt></ruby>
-      <ruby>07<rt>qī</rt></ruby>
-      <ruby>月<rt>yuè</rt></ruby>
-      <ruby>23<rt>èr shí sān</rt></ruby>
-      <ruby>日<rt>rì</rt></ruby>
-    </div>
 
-    <div class="subtitle">Học Phật Tu Hành Phải Minh Tâm — 23/07/2025</div>
+  <!-- Thanh điều hướng -->
+  <nav>
+    <ul>
+      <li><a href="#home">Trang chủ</a></li>
+      <li><a href="#about">Giới thiệu</a></li>
+      <li><a href="#media">Âm thanh</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+  </nav>
 
-    <div class="audio-section">
-      <audio controls>
-        <source src="bai1.mp3" type="audio/mpeg">
-        Trình duyệt của bạn không hỗ trợ phát audio.
-      </audio>
-    </div>
+  <!-- Banner -->
+  <section class="banner" id="home">
+    <h1>Welcome to Universal Light</h1>
+  </section>
 
-    <div class="sentence">
+  <!-- Giới thiệu -->
+  <section class="section" id="about">
+    <h2>Giới thiệu Mahayana Light</h2>
+    <p>Nội dung mô tả sứ mệnh, tầm nhìn hoặc ý nghĩa của trang.</p>
+    <a class="btn" href="#media">Xem thêm</a>
+  </section>
 
-       你们有不少人想知道自己什么时候能修到明心见性的境界，这要问你们自己，为什么呢？
-      <p>Trong số các con có không ít người muốn biết khi nào mình có thể tu đến cảnh giới “minh tâm kiến tánh”, điều này phải hỏi chính bản thân các con, vì sao vậy?</p>
-       明心见性就像一个房间，没有灯光或阳光时它就是一间暗室，想让一间暗室变成明亮的房间，你要先打开窗、打开门，让外面的阳光照射进来，或者把房间这个灯打亮，这个房间不就变得明亮了吗？
-      <p>Minh tâm kiến tánh giống như một căn phòng, khi không có ánh đèn hay ánh mặt trời thì nó chính là một căn phòng tối. Muốn biến một căn phòng tối thành phòng sáng, các con phải mở cửa sổ, mở cửa ra để ánh sáng bên ngoài chiếu rọi vào, hoặc bật sáng đèn trong phòng lên, thì phòng đó chẳng phải đã sáng lên rồi sao?</p>
-       你们没有明心见性的原因很简单，就是你没有弄懂佛法，你对佛法还是一无所知。那你为什么会一无所知呢？就是你的心还没有修明白。
-      <p>Lý do các con chưa thể “minh tâm kiến tánh” rất đơn giản, là vì các con chưa hiểu Phật pháp, các con vẫn hoàn toàn không biết gì về Phật pháp. Vậy vì sao các con lại không biết gì cả? Chính là vì tâm của các con vẫn chưa tu đúng, chưa tu sáng suốt.</p>
-       比如：“这个事情怎么祈求？我那个礼佛要怎么念？”师父告诉你，你应该问问你的心，在你内求的时候，你会发现自己在逐渐理解佛法；
-      <p>Ví dụ như: “Việc này nên thỉnh cầu thế nào? Lễ Phật đó con nên niệm ra sao?” Sư phụ nói với con, con nên hỏi chính tâm mình, khi con cầu tìm từ trong tâm, con sẽ dần dần hiểu được Phật pháp.</p>
-       再不懂的话，要学习佛学问题，这是最基本的学习方法；如果这些都不懂，那你离明心还差得很远。
-      <p>Nếu vẫn không hiểu thì phải học hỏi các vấn đề Phật học, đây là phương pháp học tập cơ bản nhất. Nếu những điều này cũng không hiểu, thì con còn cách “minh tâm” rất xa.</p>
-       真正把佛法看懂的人，不要讲修行上面，他的人生都会越来越通透。
-      <p>Người thật sự hiểu rõ Phật pháp, không cần nói đến tu hành, ngay cả cuộc sống cũng sẽ ngày càng thông suốt, minh triết hơn.</p>
-       师父举一个小例子，假如别人问你一个佛法问题，你答不上来，实际上这也是你需要修行和提升的地方，因为你不知道，说明在这方面你也不懂。
-      <p>Sư phụ lấy một ví dụ nhỏ: giả như có người hỏi con một câu hỏi về Phật pháp mà con không trả lời được, thực ra điều đó cũng cho thấy đó là chỗ con cần phải tu hành và nâng cao, bởi vì con không biết – có nghĩa là con chưa hiểu về phương diện đó.</p>
-       你是不是要把这个问题去弄懂啊？别人今天修行上的问题，有可能是你明天、下个月、明年或以后你修行上的问题。有修行问题，要及时从佛法上把它弄明白
-      <p>Vấn đề tu hành hôm nay của người khác, có thể chính là vấn đề tu hành của con vào ngày mai, tháng sau, sang năm hoặc sau này. Khi có vấn đề trong tu hành, phải kịp thời dùng Phật pháp để hiểu rõ nó.</p>
-       犹如开车在路上，修行中的问题就是阻碍你前行的石头，你要把它移开，把问题弄明白了，你才好更顺利地往前修，你们听懂了吗？
-      <p>Giống như lái xe trên đường, vấn đề trong tu hành chính là những hòn đá cản đường con đi. Con phải dọn chúng đi, hiểu rõ vấn đề, thì mới có thể tu hành tiến về phía trước thuận lợi hơn. Các con đã hiểu chưa?</p>
-       即便是修行中有一千零八十个问题，你只要肯下功夫把这些年的佛法问答看完、听完，师父相信你们早就应该修到明心的境界。
-      <p>Dù trong tu hành có đến một ngàn không trăm tám mươi vấn đề, chỉ cần các con chịu khó nghiên cứu hết những phần hỏi đáp Phật pháp trong những năm qua, nghe hết, xem hết, sư phụ tin rằng các con lẽ ra đã nên tu đến cảnh giới “minh tâm” rồi.</p>
-       但你们很多人都没有这么做，所以这也是为什么你们学心灵法门十几年还没有明心见性的原因。
-      <p>Nhưng rất nhiều người trong các con chưa làm được điều đó, vì vậy đây cũng chính là lý do tại sao sau hơn mười năm tu học theo pháp môn Tâm Linh mà vẫn chưa thể “minh tâm kiến tánh”.</p>
-       师父知道，到现在你们还有很多人问着最基础的佛法问题，甚至有不少的老弟子，新佛友问他们佛法问题，他都不知道。
-      <p>Sư phụ biết, đến bây giờ vẫn còn nhiều người trong các con đang hỏi những câu hỏi Phật pháp cơ bản nhất, thậm chí có không ít đệ tử lâu năm, khi Phật tử mới hỏi họ câu hỏi về Phật pháp, họ cũng không biết.</p>
-       当你们在跟新佛友讲“不知道”，你要感到惭愧啊，因为你不是学佛一年、两年，你学佛这么多年，很多佛法基础问题都不懂，说明你没有用心来学习佛法。
-      <p>Khi các con trả lời “không biết” với tân Phật tử, các con phải cảm thấy hổ thẹn, vì các con đâu phải học Phật một năm, hai năm, mà là đã học nhiều năm rồi, vậy mà rất nhiều kiến thức Phật pháp cơ bản vẫn không hiểu. Điều đó chứng tỏ các con chưa thực sự dụng tâm để học Phật pháp.</p>
-       师父跟你们讲，学佛一定要下功夫，这些基础的佛法都不懂，人家问你你又讲不出来，你自己要有意识地去学习。
-      <p>Sư phụ nói với các con: học Phật nhất định phải chịu khó học tập. Những điều cơ bản của Phật pháp còn không hiểu, người ta hỏi mà con không trả lời được, con phải tự ý thức học hỏi thêm.</p>
-       要知道，学习历年以来的佛法问答、听录音，都能让你们对佛法有更多的提升，并且能让你们明心见性。
-      <p>Phải biết rằng, học tập những phần hỏi đáp Phật pháp qua các năm, nghe băng ghi âm, đều có thể giúp các con nâng cao sự hiểu biết về Phật pháp, hơn nữa còn giúp các con “minh tâm kiến tánh”.</p>
-       心灵法门不是简单的念小房子、吃素、放生，而是让你们明心见性、开悟佛法、解脱的法门。
-      <p>Pháp môn Tâm Linh không phải chỉ đơn giản là niệm Ngôi Nhà Nhỏ, ăn chay, phóng sinh, mà là một pháp môn giúp các con “minh tâm kiến tánh”, khai ngộ Phật pháp, đạt đến giải thoát.</p>
-       真正想走向解脱的人，要明白学佛应以修心为侧重点，就好比你要建高楼，必须要先从建地基做起，你们明白了吗？
-      <p>Người thật sự muốn hướng đến giải thoát, phải hiểu rằng học Phật cần lấy tu tâm làm trọng điểm. Giống như muốn xây cao ốc, thì phải bắt đầu từ việc xây móng. Các con hiểu chưa?</p>
-       我希望你们这些弟子，这两年赶快把佛法基础的东西学到脑子里，以后从嘴巴里讲出来的话，让别人听了相信你是个学佛人。
-      <p>Sư phụ hy vọng các đệ tử của mình trong hai năm tới hãy nhanh chóng học thuộc những kiến thức cơ bản của Phật pháp, để sau này khi nói ra, người nghe có thể tin rằng con là người học Phật.</p>
-       学佛人要懂佛法智慧，这些智慧全部是从佛法中获得的。白话佛法学到了，法音听懂了，本性开悟了，你们讲出来的话就会带着菩萨的智慧。
-      <p>Người học Phật phải hiểu trí tuệ Phật pháp. Những trí tuệ này hoàn toàn có được từ Phật pháp. Học được “Bạch thoại Phật pháp”, nghe hiểu được pháp âm, khai ngộ được bản tính, những lời con nói ra sẽ mang theo trí tuệ của Bồ Tát.</p>
-      不当讲话时，要懂得修心养性。人不讲话，静下来能利心，经常禅坐的人，他们就是在养心。
-      <p>Lúc không cần nói, phải biết tu tâm dưỡng tính. Người không nói chuyện, lặng lẽ lại, có thể lợi tâm. Những người thường xuyên thiền tọa, chính là đang dưỡng tâm.</p>
-      禅定也是一个法门，人家一坐下来几个小时不讲话，让心在禅定中，就是在修心养性啊。
-      <p>Thiền định cũng là một pháp môn. Người ta vừa ngồi xuống mấy tiếng không nói, để tâm được an định trong thiền định, chính là đang tu tâm dưỡng tính vậy.</p>
+  <!-- Âm thanh / Media -->
+  <section class="section" id="media">
+    <h2>Âm thanh minh họa</h2>
+    <audio controls style="width:100%;">
+      <source src="audio/demo.mp3" type="audio/mpeg">
+      Trình duyệt của bạn không hỗ trợ audio.
+    </audio>
+    <p>Giải thích nội dung audio hoặc lời bình luận liên quan.</p>
+  </section>
 
-      <p style="text-align: right; margin-top: 40px;">
-        莲花童子师父
-        2025年07月23日
-         Liên Hoa Đồng Tử Sư Phụ<br>
-        Ngày 23 tháng 7 năm 2025
-      </p>
-    </div>
-  </div>
+  <!-- Liên hệ -->
+  <section class="section" id="contact">
+    <h2>Liên hệ</h2>
+    <p>Email: example@domain.com</p>
+    <p>Địa chỉ hoặc số điện thoại nếu cần.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Universal Light. All rights reserved.
+  </footer>
 </body>
 </html>
-
