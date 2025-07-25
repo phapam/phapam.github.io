@@ -39,19 +39,27 @@
       text-align: center;
     }
 
-    /* ✅ Menu cũng theo chiều rộng 900px */
-    nav {
-      background: #f2c94c;
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+    /* ✅ Bao bọc menu để có thể vuốt ngang */
+    .nav-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       max-width: 900px;
       margin: 0 auto;
+      background: #f2c94c;
       border-radius: 0 0 8px 8px;
     }
 
+    nav {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      gap: 20px;
+      padding: 15px;
+      min-width: max-content;
+    }
+
     nav a {
+      white-space: nowrap;
       color: #000;
       text-decoration: none;
       font-weight: 600;
@@ -60,7 +68,8 @@
       transition: background-color 0.3s ease;
     }
 
-    nav a:hover, nav a.active {
+    nav a:hover,
+    nav a.active {
       background-color: #ffe082;
     }
 
@@ -118,10 +127,6 @@
     }
 
     @media(max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
       main {
         margin: 15px;
         padding: 15px;
@@ -136,13 +141,15 @@
   <img src="banner.jpg" alt="Mahayana Banner">
 </div>
 
-<!-- ✅ Menu khớp kích thước với khung trắng -->
-<nav>
-  <a href="index.html" class="active">Trang chủ</a>
-  <a href="phap-am.html">Pháp âm</a>
-  <a href="van-dap.html">Vấn đáp</a>
-  <a href="do-dang.html">Đồ đằng</a>
-</nav>
+<!-- ✅ Menu có thể vuốt ngang -->
+<div class="nav-wrapper">
+  <nav>
+    <a href="index.html" class="active">Trang chủ</a>
+    <a href="phap-am.html">Pháp âm</a>
+    <a href="van-dap.html">Vấn đáp</a>
+    <a href="do-dang.html">Đồ đằng</a>
+  </nav>
+</div>
 
 <main>
   <ul class="post-list">
@@ -166,7 +173,7 @@
 </main>
 
 <footer>
-  &copy; 2025
+  &copy; 2025 Đại Thừa Phổ Quang
 </footer>
 
 </body>
