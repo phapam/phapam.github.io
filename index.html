@@ -3,63 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mahayana Universal Light</title>
+  <title>Trang chủ - Mahayana Universal Light</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      background: #fff8e1; /* nền vàng nhạt */
       margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
       color: #333;
     }
-
     header {
-      background-color: #ffcc00;
-      padding: 0;
-      text-align: center;
-      position: relative;
-    }
-
-    header img {
-      width: 100%;
-      max-height: 280px;
-      object-fit: cover;
-      display: block;
-    }
-
-    header h1 {
-      position: absolute;
-      bottom: 20px;
-      left: 0;
-      right: 0;
+      background-color: #0059b3;
+      padding: 15px 30px;
       color: white;
-      font-size: 32px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
     }
-
     nav {
-      background: #f2c94c;
+      background: #004080;
+      padding: 15px;
       display: flex;
       justify-content: center;
-      gap: 30px;
-      padding: 15px 0;
-      border-bottom: 2px solid #e0b800;
+      gap: 20px;
     }
-
-    nav button {
-      background: none;
-      border: none;
-      color: #333;
+    nav a {
+      color: white;
+      text-decoration: none;
       font-weight: 600;
-      padding: 8px 16px;
+      padding: 6px 12px;
       border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
       transition: background-color 0.3s ease;
     }
-
-    nav button:hover,
-    nav button.active {
-      background-color: #ffe082;
+    nav a:hover, nav a.active {
+      background-color: #00264d;
     }
 
     main {
@@ -69,104 +48,94 @@
       padding: 20px 30px;
       border-radius: 8px;
       box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
-      min-height: 400px;
     }
-
+    h1 {
+      color: #0059b3;
+      margin-bottom: 20px;
+    }
+    ul.post-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul.post-list li {
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+    ul.post-list li:last-child {
+      border-bottom: none;
+    }
+    ul.post-list li a {
+      font-weight: bold;
+      font-size: 18px;
+      color: #0073e6;
+      text-decoration: none;
+    }
+    ul.post-list li a:hover {
+      text-decoration: underline;
+    }
+    .post-date {
+      font-size: 14px;
+      color: #999;
+      margin-top: 5px;
+    }
     footer {
+      margin-top: 40px;
       text-align: center;
       padding: 15px;
       color: #666;
       font-size: 14px;
-      margin-top: 40px;
     }
 
-    section.content-section {
-      display: none;
-    }
-
-    section.content-section.active {
-      display: block;
+    /* Responsive */
+    @media(max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      main {
+        margin: 15px;
+        padding: 15px;
+      }
     }
   </style>
 </head>
 <body>
 
-<!-- Banner -->
-<header>
-  <img src="banner.jpg" alt="Banner Mahayana" />
-  <h1>Mahayana Universal Light</h1>
-</header>
+<header>Mahayana Universal Light</header>
 
-<!-- MENU HÀNG NGANG -->
 <nav>
-  <button id="nav-home" class="active" onclick="showSection('home')">Trang chủ</button>
-  <button id="nav-phap-am" onclick="showSection('phap-am')">Pháp âm</button>
-  <button id="nav-van-dap" onclick="showSection('van-dap')">Vấn đáp</button>
-  <button id="nav-do-dang" onclick="showSection('do-dang')">Đồ đằng</button>
+  <nav class="menu">
+  <a href="index.html" class="active">Trang chủ</a>
+  <a href="phap-am.html">Pháp âm</a>
+  <a href="van-dap.html">Vấn đáp</a>
+  <a href="do-dang.html">Đồ đằng</a>
 </nav>
-
+  
 <main>
-  <!-- TRANG CHỦ -->
-  <section id="home" class="content-section active">
-    <h2>Bài mới nhất</h2>
-    <ul>
-      <li><a href="#" onclick="showSection('phap-am')">Bài pháp âm 1: Tâm Kinh</a></li>
-      <li><a href="#" onclick="showSection('van-dap')">Vấn đáp: Thiền định</a></li>
-      <li><a href="#" onclick="showSection('do-dang')">Đồ đằng: Bài học tâm linh</a></li>
-    </ul>
-  </section>
-
-  <!-- PHÁP ÂM -->
-  <section id="phap-am" class="content-section">
-    <h2>Pháp âm</h2>
-    <article>
-      <h3>Bài pháp âm 1: Tâm Kinh</h3>
-      <audio controls>
-        <source src="audio/demo.mp3" type="audio/mpeg" />
-        Trình duyệt không hỗ trợ phát audio.
-      </audio>
-      <p>Giới thiệu ngắn về bài giảng Tâm Kinh.</p>
-    </article>
-  </section>
-
-  <!-- VẤN ĐÁP -->
-  <section id="van-dap" class="content-section">
-    <h2>Vấn đáp</h2>
-    <article>
-      <h3>Câu hỏi: Làm sao bắt đầu thiền?</h3>
-      <p>Trả lời: Bắt đầu bằng cách tìm không gian yên tĩnh và quan sát hơi thở.</p>
-    </article>
-  </section>
-
-  <!-- ĐỒ ĐẰNG -->
-  <section id="do-dang" class="content-section">
-    <h2>Đồ đằng</h2>
-    <article>
-      <h3>Bài học 1: Lòng từ bi</h3>
-      <p>Lòng từ bi là nền tảng trong Phật giáo Đại Thừa.</p>
-    </article>
-  </section>
+  <h1>Bài mới nhất</h1>
+  <ul class="post-list">
+    <li>
+      <a href="phap-am.html#bai1">Bài pháp âm 1: Tâm Kinh</a>
+      <div class="post-date">Ngày đăng: 25/07/2025</div>
+    </li>
+    <li>
+      <a href="van-dap.html#vd1">Vấn đáp: Câu hỏi về Thiền định</a>
+      <div class="post-date">Ngày đăng: 24/07/2025</div>
+    </li>
+    <li>
+      <a href="do-dang.html#dd1">Đồ đằng: Bài học về tâm linh</a>
+      <div class="post-date">Ngày đăng: 23/07/2025</div>
+    </li>
+    <li>
+      <a href="phap-am.html#bai2">Bài pháp âm 2: Đại Thừa Phật Giáo</a>
+      <div class="post-date">Ngày đăng: 20/07/2025</div>
+    </li>
+  </ul>
 </main>
 
-<footer>&copy; 2025 Mahayana Universal Light</footer>
-
-<!-- SCRIPT ĐIỀU KHIỂN MENU -->
-<script>
-  function showSection(sectionId) {
-    // Ẩn tất cả section
-    document.querySelectorAll('section.content-section').forEach(sec => {
-      sec.classList.remove('active');
-    });
-    // Hiện section tương ứng
-    document.getElementById(sectionId).classList.add('active');
-
-    // Đổi trạng thái nút menu
-    document.querySelectorAll('nav button').forEach(btn => {
-      btn.classList.remove('active');
-    });
-    document.getElementById('nav-' + sectionId).classList.add('active');
-  }
-</script>
+<footer>
+  &copy; 2025 Mahayana Universal Light
+</footer>
 
 </body>
 </html>
