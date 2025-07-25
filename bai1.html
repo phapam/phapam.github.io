@@ -12,11 +12,10 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #fff8dc; /* vàng nhạt */
+      background: #fff8dc;
       color: #000;
     }
 
-    /* Banner có hiệu ứng mây bay */
     .banner {
       max-width: 900px;
       margin: 0 auto;
@@ -107,6 +106,7 @@
       box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
       line-height: 1.6;
       font-size: 16px;
+      position: relative;
     }
 
     h1 {
@@ -117,11 +117,34 @@
     .post-date {
       font-size: 14px;
       color: #666;
+      margin-bottom: 20px;
+    }
+
+    .audio-wrapper {
+      display: flex;
+      justify-content: center;
       margin-bottom: 30px;
+    }
+
+    .audio-wrapper audio {
+      width: 100%;
+      max-width: 500px;
+      border: 3px solid #ffd700;
+      border-radius: 8px;
+      padding: 5px;
+      background: #fff;
     }
 
     p {
       margin-bottom: 16px;
+    }
+
+    .signature {
+      text-align: right;
+      font-style: italic;
+      font-size: 15px;
+      color: #444;
+      margin-top: 40px;
     }
 
     footer {
@@ -137,18 +160,21 @@
         margin: 15px;
         padding: 15px;
       }
+      .audio-wrapper audio {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
-<!-- Banner có hiệu ứng mây -->
+<!-- Banner -->
 <div class="banner">
   <img src="banner.jpg" alt="Mahayana Banner" />
   <div class="clouds"></div>
 </div>
 
-<!-- Menu có thể vuốt ngang -->
+<!-- Navigation -->
 <div class="nav-wrapper">
   <nav>
     <a href="index.html">Trang chủ</a>
@@ -158,19 +184,18 @@
   </nav>
 </div>
 
+<!-- Main Content -->
 <main>
-  <h1>Dùng Thiện Tâm Gieo Trồng Phúc Điền  21/07/2025</h1>
+  <h1>Dùng Thiện Tâm Gieo Trồng Phúc Điền 21/07/2025</h1>
   <div class="post-date">Ngày đăng: 21/07/2025</div>
 
-  <div class="post-date">Ngày đăng: 21/07/2025</div>
-
-<!-- Audio nằm giữa với viền vàng -->
-<div class="audio-wrapper">
-  <audio controls>
-    <source src="audio/phapam-bai1.mp3" type="audio/mpeg" />
-    Trình duyệt của bạn không hỗ trợ phần tử audio.
-  </audio>
-</div>
+  <!-- Audio Section -->
+  <div class="audio-wrapper">
+    <audio controls>
+      <source src="audio/phapam-bai1.mp3" type="audio/mpeg">
+      Trình duyệt của bạn không hỗ trợ phần tử audio.
+    </audio>
+  </div>
 
   <p>Trên thế gian này, điều trân quý nhất chính là thân người khó có được, Chánh Pháp khó nghe. Một động vật muốn đầu thai thành một người, nó chí ít phải trải qua ngàn kiếp trở lên, “kiếp” này đại diện cho thời gian vô cùng lâu dài, cũng không phải chỉ một ngàn năm, cho nên nói, từ động vật đầu thai thành một người là vô cùng khó khăn.</p>
 
