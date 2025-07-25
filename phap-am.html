@@ -3,41 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pháp âm - Mahayana Universal Light</title>
+  <title>Vấn đáp - Mahayana Universal Light</title>
   <style>
-    /* Dùng lại CSS từ index.html hoặc bạn có thể tách ra file style.css */
-    /* Copy style ở trên hoặc dùng file css riêng cho tiện */
+    /* Giữ nguyên style như trên */
+    /* (Bạn có thể tái sử dụng đoạn CSS trong file phap-am.html) */
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
+      background: #fff8dc;
+      color: #000;
+    }
+    .banner {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px 8px 0 0;
+    }
+    .banner img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px 8px 0 0;
+    }
+    .clouds {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: url('clouds.png') repeat-x;
+      background-size: contain;
+      animation: moveClouds 60s linear infinite;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    @keyframes moveClouds {
+      from { transform: translateX(0); }
+      to { transform: translateX(50%); }
     }
     header {
-      background-color: #0059b3;
-      padding: 15px 30px;
-      color: white;
-      font-size: 24px;
+      background-color: #ffd700;
+      padding: 20px 30px;
+      color: #000;
+      font-size: 28px;
       font-weight: bold;
       text-align: center;
     }
+    .nav-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      max-width: 900px;
+      margin: 0 auto;
+      background: #f2c94c;
+      border-radius: 0 0 8px 8px;
+    }
     nav {
-      background: #004080;
-      padding: 15px;
       display: flex;
-      justify-content: center;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
       gap: 20px;
+      padding: 15px;
+      min-width: max-content;
     }
     nav a {
-      color: white;
+      white-space: nowrap;
+      color: #000;
       text-decoration: none;
       font-weight: 600;
       padding: 6px 12px;
       border-radius: 4px;
       transition: background-color 0.3s ease;
     }
-    nav a:hover, nav a.active {
-      background-color: #00264d;
+    nav a:hover,
+    nav a.active {
+      background-color: #ffe082;
     }
     main {
       max-width: 900px;
@@ -48,18 +93,33 @@
       box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
     }
     h1 {
-      color: #0059b3;
+      color: #b58900;
       margin-bottom: 20px;
     }
-    section.audio-item {
-      margin-bottom: 30px;
+    ul.post-list {
+      list-style: none;
+      padding-left: 0;
     }
-    section.audio-item h2 {
-      margin-bottom: 10px;
+    ul.post-list li {
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
     }
-    audio {
-      width: 100%;
-      outline: none;
+    ul.post-list li:last-child {
+      border-bottom: none;
+    }
+    ul.post-list li a {
+      font-weight: bold;
+      font-size: 18px;
+      color: #d35400;
+      text-decoration: none;
+    }
+    ul.post-list li a:hover {
+      text-decoration: underline;
+    }
+    .post-date {
+      font-size: 14px;
+      color: #666;
+      margin-top: 5px;
     }
     footer {
       margin-top: 40px;
@@ -68,12 +128,7 @@
       color: #666;
       font-size: 14px;
     }
-    /* Responsive */
     @media(max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
       main {
         margin: 15px;
         padding: 15px;
@@ -83,40 +138,20 @@
 </head>
 <body>
 
-<header>Mahayana Universal Light</header>
+<div class="banner">
+  <img src="banner.jpg" alt="Mahayana Banner">
+  <div class="clouds"></div>
+</div>
 
-<nav>
-  <a href="index.html">Trang chủ</a>
-  <a href="phap-am.html" class="active">Pháp âm</a>
-  <a href="van-dap.html">Vấn đáp</a>
-  <a href="do-dang.html">Đồ đằng</a>
-</nav>
+<div class="nav-wrapper">
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="phap-am.html">Pháp âm</a>
+    <a href="van-dap.html" class="active">Vấn đáp</a>
+    <a href="do-dang.html">Đồ đằng</a>
+  </nav>
+</div>
 
 <main>
-  <h1>Pháp âm</h1>
-
-  <section class="audio-item" id="bai1">
-    <h2>Bài pháp âm 1: Tâm Kinh</h2>
-    <audio controls>
-      <source src="audio/demo.mp3" type="audio/mpeg" />
-      Trình duyệt không hỗ trợ phát audio.
-    </audio>
-    <p>Nội dung tóm tắt hoặc lời dẫn cho bài pháp âm 1.</p>
-  </section>
-
-  <section class="audio-item" id="bai2">
-    <h2>Bài pháp âm 2: Đại Thừa Phật Giáo</h2>
-    <audio controls>
-      <source src="audio/demo2.mp3" type="audio/mpeg" />
-      Trình duyệt không hỗ trợ phát audio.
-    </audio>
-    <p>Nội dung tóm tắt hoặc lời dẫn cho bài pháp âm 2.</p>
-  </section>
-</main>
-
-<footer>
-  &copy; 2025 Mahayana Universal Light
-</footer>
-
-</body>
-</html>
+  <h1>Vấn đáp</h1>
+  <ul class="post-list
