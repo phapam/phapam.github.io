@@ -3,28 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trang chủ - Mahayana Universal Light</title>
   <style>
     * {
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #fff8dc; /* vàng nhạt */
-      color: #000; /* màu chữ đen */
+      color: #000;
     }
 
-    /* Phần banner */
+    /* ✅ Banner thu gọn lại bằng khung nội dung */
+    .banner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
     .banner img {
       width: 100%;
       height: auto;
       max-height: 300px;
       object-fit: cover;
       display: block;
+      border-radius: 8px 8px 0 0;
     }
 
     header {
-      background-color: #ffd700; /* vàng tươi */
+      background-color: #ffd700;
       padding: 20px 30px;
       color: #000;
       font-size: 28px;
@@ -32,16 +39,20 @@
       text-align: center;
     }
 
+    /* ✅ Menu cũng theo chiều rộng 900px */
     nav {
-      background: #f2c94c; /* vàng nhẹ */
+      background: #f2c94c;
       padding: 15px;
       display: flex;
       justify-content: center;
       gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 0 0 8px 8px;
     }
 
     nav a {
-      color: #000; /* chữ đen */
+      color: #000;
       text-decoration: none;
       font-weight: 600;
       padding: 6px 12px;
@@ -63,7 +74,7 @@
     }
 
     h1 {
-      color: #b58900; /* nâu vàng */
+      color: #b58900;
       margin-bottom: 20px;
     }
 
@@ -106,7 +117,6 @@
       font-size: 14px;
     }
 
-    /* Responsive */
     @media(max-width: 600px) {
       nav {
         flex-direction: column;
@@ -121,10 +131,12 @@
 </head>
 <body>
 
-<!-- ✅ Banner ảnh --> 
+<!-- ✅ Banner ảnh giới hạn chiều ngang -->
 <div class="banner">
   <img src="banner.jpg" alt="Mahayana Banner">
 </div>
+
+<!-- ✅ Menu khớp kích thước với khung trắng -->
 <nav>
   <a href="index.html" class="active">Trang chủ</a>
   <a href="phap-am.html">Pháp âm</a>
@@ -154,7 +166,7 @@
 </main>
 
 <footer>
-  &copy; 2025 
+  &copy; 2025
 </footer>
 
 </body>
